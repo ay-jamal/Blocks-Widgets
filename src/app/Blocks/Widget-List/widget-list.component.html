@@ -1,0 +1,18 @@
+<div class="list">
+  <nb-card *ngFor="let widget of widgets" class="widget-container">
+    <nb-card-header>
+      <img [src]="widget.image" alt="" />
+    </nb-card-header>
+    <nb-card-body>
+      <p class="header bold">{{widget.title}}</p>
+      <p class="content">
+       {{widget.description}}
+      </p>
+      <button (click)="openWidgetDetails()" nbButton>
+        Open Block Details
+        <fa-icon class="icon" [icon]="['fas', 'arrow-right']"></fa-icon>
+      </button>
+    </nb-card-body>
+  </nb-card>
+
+</div>

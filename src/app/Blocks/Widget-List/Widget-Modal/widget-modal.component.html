@@ -1,0 +1,32 @@
+<nb-card class="modal-container">
+  <nb-card-header>
+    <h4>Block Content</h4>
+    <button class="close none-outline" (click)="close(null)">
+      <fa-icon class="prefix icon" [icon]="['fas', 'times']"></fa-icon>
+    </button>
+  </nb-card-header>
+  <nb-card-body class="modal-body">
+    <div class="block-content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, laudantium
+      eveniet! Ut ipsum nam autem dolores? Voluptatibus reprehenderit, error
+      perspiciatis facilis libero magnam repudiandae accusamus commodi
+      consectetur est blanditiis rem?
+    </div>
+    <div class="input-field">
+      <label> item Description </label>
+      <input type="text" placeholder="untitled..." />
+      <button (click)="captureAndInsertDescription()" class="gray" nbButton>
+        Capture selected text & insert description
+      </button>
+    </div>
+
+    <ag-grid-angular
+      class="ag-theme-alpine"
+      style="width: 100%; height: 300px"
+      [rowData]="rowData"
+      [columnDefs]="colDefs"
+      (gridReady)="onGridReady($event)"
+    >
+    </ag-grid-angular>
+  </nb-card-body>
+</nb-card>

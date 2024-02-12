@@ -1,0 +1,30 @@
+.blocks-container {
+  width: 100%;
+  height: 100%;
+  padding: 0.6rem;
+  .block-header {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: .8rem;
+    .start {
+      display: flex;
+      gap: 5px;
+      .form-field {
+        border: 0;
+        background-color: #f1efef;
+      }
+    }
+  }
+
+  nb-card-body.widget-list {
+    width: 100%;
+    display: flex !important;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}

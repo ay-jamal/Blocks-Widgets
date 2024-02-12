@@ -1,0 +1,41 @@
+<nb-card class="blocks-container">
+  <nb-card-header class="block-header">
+    <div class="start">
+      <div class="form-field mt-3 prefix">
+        <label class="continter">
+          <p class="field-title">
+            <fa-icon class="icon" [icon]="['fas', 'upload']"></fa-icon>
+          </p>
+          <select disabled class="field-input select-option">
+            <option>Create New</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-field mt-3 prefix">
+        <label class="continter">
+          <p class="field-title">
+            <fa-icon class="icon" [icon]="['fas', 'plus']"></fa-icon>
+          </p>
+          <select class="field-input select-option">
+            <option>Order By</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="end">
+      <div class="form-field mt-3 prefix">
+        <label class="continter">
+          <p class="field-title">
+            <fa-icon class="icon" [icon]="['fas', 'sort']"></fa-icon>
+          </p>
+          <select class="field-input select-option">
+            <option>Sort: Last Modified</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </nb-card-header>
+  <nb-card-body class="widget-list">
+    <app-widget-list></app-widget-list>
+  </nb-card-body>
+</nb-card>

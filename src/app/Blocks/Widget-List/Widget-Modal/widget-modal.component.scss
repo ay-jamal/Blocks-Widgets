@@ -1,0 +1,15 @@
+
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button.gray {
+  width: 60%;
+  font-size: 12px !important;
+  color: #fff !important;
+  background-color: #565e6d !important;
+  margin-block: 10px;
+}
