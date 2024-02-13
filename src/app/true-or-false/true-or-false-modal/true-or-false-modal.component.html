@@ -27,18 +27,13 @@
         <nb-radio [value]="4">Level 4</nb-radio>
         <nb-radio [value]="5">Level 5</nb-radio>
       </nb-radio-group>
-      <nb-radio-group name="difficulty" [(ngModel)]="questionObject.difficulty">
-        <nb-radio [value]="1">Difficulty 1</nb-radio>
-        <nb-radio [value]="2">Difficulty 2</nb-radio>
-        <nb-radio [value]="3">Difficulty 3</nb-radio>
-        <nb-radio [value]="4">Difficulty 4</nb-radio>
-      </nb-radio-group>
+   
       <nb-radio-group name="type" [(ngModel)]="questionObject.type">
         <nb-radio [value]="1">Type 1</nb-radio>
         <nb-radio [value]="2">Type 2</nb-radio>
-        <nb-radio value="3">Type 3</nb-radio>
-        <nb-radio value="4">Type 4</nb-radio>
-        <nb-radio value="5">Type 5</nb-radio>
+        <nb-radio [value]="3">Type 3</nb-radio>
+        <nb-radio [value]="4">Type 4</nb-radio>
+        <nb-radio [value]="5">Type 5</nb-radio>
       </nb-radio-group>
       <button (click)="createQuestion()" class="gray" nbButton>
         Create Question

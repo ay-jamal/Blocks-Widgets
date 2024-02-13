@@ -36,7 +36,6 @@ export class TrueOrFalseModalComponent {
     question: '',
     isTrue: null,
     isFalse: null,
-    difficulty: null,
     type: null,
     level: null,
   };
@@ -48,34 +47,27 @@ export class TrueOrFalseModalComponent {
   }
 
   createQuestion() {
-    const { question, isTrue, isFalse, difficulty, type, level } = this.questionObject;
+    const { question, isTrue, isFalse, type, level } = this.questionObject;
     const newRow = {
       id: String(this.rowData.length),
       Question: question,
       isTrue: isTrue ? '1' : '0',
       isFalse: isTrue ? '0' : '1',
-      Diffeculty: Number(difficulty),
-      Level: String(level),
+      level: String(level),
       Type: Number(type),
       del: '',
     };
     console.log(newRow);
     this.rowData = [...this.rowData, newRow]; // Update the rowData array with the new item
     // Clear questionObject values
-    this.questionObject.question = '';
-    this.questionObject.isTrue = null;
-    this.questionObject.isFalse = null;
-    this.questionObject.difficulty = null;
-    this.questionObject.type = null;
-    this.questionObject.level = null;
   }
 
 
   // Initial data for the grid
   rowData = [
-    { id: "0", Question: "Question 1", isTrue: '0', isFalse: '1', Diffeculty: 3, Type: 1, del: '' },
-    { id: "1", Question: "Question 2", isTrue: '1', isFalse: '0', Diffeculty: 2, Type: 2, del: '' },
-    { id: "2", Question: "Question 3", isTrue: '0', isFalse: '1', Diffeculty: 1, Type: 3, del: '' },
+    { id: "0", Question: "Question 1", isTrue: '0', isFalse: '1', level: '3', Type: 1, del: '' },
+    { id: "1", Question: "Question 2", isTrue: '1', isFalse: '0', level: '2', Type: 2, del: '' },
+    { id: "2", Question: "Question 3", isTrue: '0', isFalse: '1', level: '1', Type: 3, del: '' },
   ];
 
   // Column Definitions: Defines & controls grid columns.
@@ -105,8 +97,8 @@ export class TrueOrFalseModalComponent {
       editable: true
     },
     {
-      field: "Diffeculty",
-      headerName: 'Diffeculty',
+      field: "level",
+      headerName: 'Level',
       minWidth: 100,
       flex: 1,
       editable: true
