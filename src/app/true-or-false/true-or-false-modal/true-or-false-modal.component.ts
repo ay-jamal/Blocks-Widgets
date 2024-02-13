@@ -60,11 +60,15 @@ export class TrueOrFalseModalComponent {
     };
     console.log(newRow);
     this.rowData = [...this.rowData, newRow]; // Update the rowData array with the new item
+    // Clear questionObject values
   }
 
 
   // Initial data for the grid
-  rowData: any = [
+  rowData = [
+    { id: "0", Question: "Question 1", isTrue: '0', isFalse: '1', level: '3', Type: 1, del: '' },
+    { id: "1", Question: "Question 2", isTrue: '1', isFalse: '0', level: '2', Type: 2, del: '' },
+    { id: "2", Question: "Question 3", isTrue: '0', isFalse: '1', level: '1', Type: 3, del: '' },
   ];
 
 
