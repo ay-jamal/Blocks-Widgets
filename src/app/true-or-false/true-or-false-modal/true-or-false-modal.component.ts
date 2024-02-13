@@ -119,7 +119,7 @@ export class TrueOrFalseModalComponent {
       editable: true
     },
     {
-      headerName: '',
+      headerName: 'Del',
       resizable: false,
       maxWidth: 70,
       cellRenderer: (params: any) => {
