@@ -15,6 +15,10 @@ const routes: Routes = [
       {
         path: 'blocks',
         loadComponent: () => import('./Blocks/blocks.component').then(m => m.BlocksComponent)
+      },
+      {
+        path: 'true-or-false',
+        loadComponent: () => import('./true-or-false/true-or-false.component').then(m => m.TrueOrFalseComponent)
       }
     ]
   }

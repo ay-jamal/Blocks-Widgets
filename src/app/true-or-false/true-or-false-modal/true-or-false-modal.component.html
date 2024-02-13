@@ -1,0 +1,57 @@
+<nb-card class="modal-container">
+  <nb-card-header>
+    <h4>True & False</h4>
+    <button class="close none-outline" (click)="close(null)">
+      <fa-icon class="prefix icon" [icon]="['fas', 'times']"></fa-icon>
+    </button>
+  </nb-card-header>
+  <nb-card-body class="modal-body">
+    <div class="block-content">
+      {{ TextContent }}
+    </div>
+    <div class="input-field">
+      <label>Question Text</label>
+      <input
+        type="text"
+        placeholder="untitled..."
+        [(ngModel)]="questionObject.question"
+      />
+      <nb-radio-group name="isTrue" [(ngModel)]="questionObject.isTrue">
+        <nb-radio [value]="true">True</nb-radio>
+        <nb-radio [value]="false">False</nb-radio>
+      </nb-radio-group>
+      <nb-radio-group name="level" [(ngModel)]="questionObject.level">
+        <nb-radio [value]="1">Level 1</nb-radio>
+        <nb-radio [value]="2">Level 2</nb-radio>
+        <nb-radio [value]="3">Level 3</nb-radio>
+        <nb-radio [value]="4">Level 4</nb-radio>
+        <nb-radio [value]="5">Level 5</nb-radio>
+      </nb-radio-group>
+      <nb-radio-group name="difficulty" [(ngModel)]="questionObject.difficulty">
+        <nb-radio [value]="1">Difficulty 1</nb-radio>
+        <nb-radio [value]="2">Difficulty 2</nb-radio>
+        <nb-radio [value]="3">Difficulty 3</nb-radio>
+        <nb-radio [value]="4">Difficulty 4</nb-radio>
+      </nb-radio-group>
+      <nb-radio-group name="type" [(ngModel)]="questionObject.type">
+        <nb-radio [value]="1">Type 1</nb-radio>
+        <nb-radio [value]="2">Type 2</nb-radio>
+        <nb-radio value="3">Type 3</nb-radio>
+        <nb-radio value="4">Type 4</nb-radio>
+        <nb-radio value="5">Type 5</nb-radio>
+      </nb-radio-group>
+      <button (click)="createQuestion()" class="gray" nbButton>
+        Create Question
+      </button>
+    </div>
+
+    <ag-grid-angular
+      class="ag-theme-alpine"
+      style="width: 100%; min-height: 250px"
+      [rowData]="rowData"
+      [columnDefs]="colDefs"
+      (gridReady)="onGridReady($event)"
+    >
+    </ag-grid-angular>
+  </nb-card-body>
+</nb-card>

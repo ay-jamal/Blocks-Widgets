@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NbButtonModule, NbCardModule, NbDialogRef } from '@nebular/theme';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { AgGridAngular, AgGridModule } from 'ag-grid-angular';
+import { AgGridModule } from 'ag-grid-angular';
 import { ColDef } from 'ag-grid-community';
 
 @Component({

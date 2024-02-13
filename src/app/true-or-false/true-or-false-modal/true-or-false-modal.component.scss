@@ -1,13 +1,26 @@
+.modal-container {
+  height: 90%;
+  width: 750px !important;
+}
+
 .modal-body {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 button.gray {
   width: 60%;
   font-size: 12px !important;
   color: #fff !important;
   background-color: #565e6d !important;
   margin-block: 10px;
+}
+
+nb-radio-group {
+  display: flex;
 }

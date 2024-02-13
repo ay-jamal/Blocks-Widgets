@@ -120,7 +120,7 @@ button.close {
 nb-card.modal-container {
   margin: 0;
   overflow: hidden;
-  width: 600px;
+  min-width: 600px;
   nb-card-header {
     display: flex;
     align-items: center;
