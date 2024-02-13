@@ -5,6 +5,7 @@ import { AgGridModule } from 'ag-grid-angular';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ColDef } from 'ag-grid-community';
 import { FormsModule } from '@angular/forms';
+import { DeleteButtonComponent } from '../delete-button/delete-button.component';
 
 
 @Component({
@@ -59,16 +60,17 @@ export class TrueOrFalseModalComponent {
     };
     console.log(newRow);
     this.rowData = [...this.rowData, newRow]; // Update the rowData array with the new item
-    // Clear questionObject values
   }
 
 
   // Initial data for the grid
-  rowData = [
-    { id: "0", Question: "Question 1", isTrue: '0', isFalse: '1', level: '3', Type: 1, del: '' },
-    { id: "1", Question: "Question 2", isTrue: '1', isFalse: '0', level: '2', Type: 2, del: '' },
-    { id: "2", Question: "Question 3", isTrue: '0', isFalse: '1', level: '1', Type: 3, del: '' },
+  rowData: any = [
   ];
+
+
+  deleteRow(index: number): void {
+    this.rowData.splice(index, 1);
+  }
 
   // Column Definitions: Defines & controls grid columns.
   colDefs: ColDef[] = [
@@ -114,15 +116,11 @@ export class TrueOrFalseModalComponent {
       headerName: 'Del',
       resizable: false,
       maxWidth: 70,
-      cellRenderer: (params: any) => {
-        return `
-        <span>
-        <i class="fa-solid fa-trash"></i>
-        </span>
-        `
-      }
+      cellRenderer: DeleteButtonComponent,
     },
   ];
+
+
 
   // Method to close the modal
   close(res: any) {
