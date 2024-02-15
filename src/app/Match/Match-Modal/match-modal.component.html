@@ -1,1 +1,52 @@
-<p>match-modal works!</p>
+<nb-card class="modal-container">
+  <nb-card-header>
+    <h4>MATCH Questions Builder</h4>
+    <button class="close none-outline" (click)="close(null)">
+      <fa-icon class="prefix icon" [icon]="['fas', 'times']"></fa-icon>
+    </button>
+  </nb-card-header>
+  <nb-card-body class="modal-body">
+    <div class="block-content">
+      {{ TextContent }}
+    </div>
+    <div class="form-container">
+      <div class="input-field">
+        <label>A (Information)</label>
+        <input
+          [(ngModel)]="matchObject.AInfo"
+          type="text"
+          placeholder="untitled..."
+        />
+        <input type="file" accept="image/*" hidden #AImage />
+        <img
+          (click)="AImage.click()"
+          src="https://fakeimg.pl/600x400/f3f3f5/909090"
+          alt=""
+        />
+      </div>
+      <div class="input-field">
+        <label>B (Matched Information)</label>
+        <input
+          [(ngModel)]="matchObject.BInfo"
+          type="text"
+          placeholder="untitled..."
+        />
+        <input type="file" accept="image/*" hidden #BImage />
+        <img
+          (click)="BImage.click()"
+          src="https://fakeimg.pl/600x400/f3f3f5/909090"
+          alt=""
+        />
+      </div>
+    </div>
+    <button (click)="submit()" class="gray" nbButton>submit</button>
+    <ag-grid-angular
+      class="ag-theme-alpine"
+      style="width: 100%; height: 250px"
+      [rowData]="rowData"
+      [columnDefs]="colDefs"
+      (gridReady)="onGridReady($event)"
+    >
+    </ag-grid-angular>
+  </nb-card-body>
+</nb-card>

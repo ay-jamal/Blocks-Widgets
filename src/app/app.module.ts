@@ -22,7 +22,6 @@ import { AgGridAngular, AgGridModule } from 'ag-grid-angular';
     NbButtonModule,
     NbDialogModule.forRoot(),
     AgGridModule,
-    
   ],
   providers: [
     AgGridAngular

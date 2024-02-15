@@ -19,6 +19,10 @@ const routes: Routes = [
       {
         path: 'true-or-false',
         loadComponent: () => import('./true-or-false/true-or-false.component').then(m => m.TrueOrFalseComponent)
+      },
+      {
+        path: 'match',
+        loadComponent: () => import('./Match/match.component').then(m => m.MatchComponent)
       }
     ]
   }

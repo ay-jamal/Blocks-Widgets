@@ -1,0 +1,23 @@
+.modal-container {
+  width: 780px !important;
+  height: 90%;
+  .form-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    .input-field {
+      width: 50%;
+      img{
+        padding: 5px;
+        margin-top: 5px;
+      }
+    }
+  }
+  button.gray {
+    width: 100%;
+    font-size: 12px !important;
+    color: #fff !important;
+    background-color: #565e6d !important;
+    margin-block: 10px;
+  }
+}
